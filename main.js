@@ -1,5 +1,6 @@
 const list = document.querySelectorAll("nav ul li");
 const sections = document.querySelectorAll("section");
+const btn = document.querySelector("input.send")
 let sectionsHeight = [];
 sections.forEach((section, index) => { sectionsHeight[index] = section.offsetHeight })
 
@@ -49,4 +50,9 @@ window.addEventListener("scroll", () => {
     list[6].classList.add("active");
   }
 
+})
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault;
+  alert("Thanks for your email! ");
 })
