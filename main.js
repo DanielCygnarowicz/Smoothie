@@ -15,8 +15,8 @@ list.forEach((li, i) => {
     for (let i = 0; i < index; i++) {
       scrollPosition += sectionsHeight[i];
     }
-    if (window.outerWidth < 767) window.scrollTo(0, scrollPosition - 30);
-    else window.scrollTo(0, scrollPosition);
+
+    window.scrollTo(0, scrollPosition);
     if (window.outerWidth < 767) $(".fas, nav").toggleClass("off");
   })
 
@@ -60,7 +60,7 @@ window.addEventListener("scroll", () => {
 btn.addEventListener("click", (event) => {
 
   input.value ? alert("Thanks for your email! ") : alert("Write email before sending!");
-
+  
 })
 
 $(".burger").on("click", function () {
