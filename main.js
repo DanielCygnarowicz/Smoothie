@@ -14,7 +14,7 @@ list.forEach((li, i) => {
     for (let i = 0; i < index; i++) {
       scrollPosition += sectionsHeight[i];
     }
-    if (window.outerWidth < 767) window.scrollTo(0, scrollPosition + 30);
+    if (window.outerWidth < 767) window.scrollTo(0, scrollPosition + 40);
     else window.scrollTo(0, scrollPosition);
     if (window.outerWidth < 767) $(".fas, nav").toggleClass("off");
   })
