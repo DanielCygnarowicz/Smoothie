@@ -1,38 +1,48 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 body{
   overflow-x: hidden;
-  background-image: url("./img/background.png");
+  background-image: url("./img/background2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 nav{
-background-color: rgb(255, 240, 122);
+background-color: white;
 position: fixed;
 top: 0;
 left: 0;
 width: 100vw;
 height: 100vh;
 padding: 15px;
+-webkit-transition: .2s;
 transition: .2s;
 color: #831B4C;
 text-align: center;
 }
 
 nav ul{
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- flex-direction: column;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
 height: 100vh;
 }
 
 nav ul li{
   list-style: none;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-family: 'roboto', sans-serif;
   border-radius: 25px;
 font-size: 18px;
@@ -115,7 +125,7 @@ span.media a {
     font-size: 20px;
     padding: 8px;
     text-decoration: none;
-    color: #FFF07A;
+    color: white;
     background-color: #831B4C;
     border-radius: 100px;
     margin: 0 10px;
@@ -134,20 +144,20 @@ form{
     
 form input{
   padding: 5px; 
-  
-  color: #831B4C;
-  border: 2px solid #831B4C;
+  color: white;
+  border: 2px solid black;
 }
 form input.send{
-  padding: 5px 15px;
+  cursor: pointer;
+  padding: 5px 40px;
   font-weight: bold;
-  background-color: #FFF07A;
+  background-color:#831B4C;
 }
 
 footer{
   text-align: center;
   color: #831B4C;
-  background-color: #FFF07A;
+  background-color: white;
   font-size: 14px;
   font-weight: bold;
 }
@@ -180,14 +190,18 @@ footer span{
   nav ul{
     cursor: pointer;
    height: 100%;
-   flex-direction: row;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
   }
   
   nav ul li{
     font-size: 12px;
     line-height: 5vh;
     font-weight: bold;
-    transform: rotate(-10deg)
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg)
   }
   nav ul li.active{
     background-color: #831B4C;
@@ -219,6 +233,8 @@ footer span{
   }
   
   section div.wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   
@@ -268,24 +284,28 @@ footer span{
    margin:0 30px;
    }
   nav ul li{
+  
+    -webkit-transform: rotate(0);
    
-    transform: rotate(0);
+            transform: rotate(0);
     font-size: 16px;
   }
-
+  ul li:hover{
+    background-color: yellowgreen;
+  }
   nav ul li p {
     font-size: 26px;
   }
   section{
     margin: auto;
-    min-height: 95vh;
+ padding: 30px;
+    min-height: 50vh;
     width: 80%;
   }
   
   section:last-of-type{
-    padding-bottom: 0;
+    padding-bottom: 8vh;
   }
-  
   section div{
     padding: 30px;
  
@@ -317,10 +337,11 @@ footer span{
   span.media a {
     font-size: 20px;
     padding: 8px;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
   }
   span.media a:hover{
-    color: white;
+    color: yellowgreen;
   }
    
 }
@@ -330,11 +351,14 @@ footer span{
     nav ul{
      max-width: 1200px;
      margin: auto;
+     min-height: 5vh;
     }
   
     section{
       max-width: 1200px;
       font-size: 20px;
+      padding: 35px;
+    min-height: 50vh;
     }
 
     section div p span.media a {
@@ -345,14 +369,20 @@ footer span{
     section div.wrapper div h3{
     font-size: 36px;
     }
+     
+ 
     
     footer{
-    height: 10vh;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    height: 8vh;
     font-size: 18px;
     }
     
     footer span{
-      line-height: 10vh;
+      line-height: 8vh;
     }
     
     span.media a {
@@ -368,10 +398,7 @@ footer span{
       padding: 5px; 
      
     }
-    form input.send{
-      padding: 5px 15px;
-    
-    }
+  
      
     
 }

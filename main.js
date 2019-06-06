@@ -1,6 +1,7 @@
 const list = document.querySelectorAll("nav ul li");
 const sections = document.querySelectorAll("section");
 const btn = document.querySelector("input.send")
+const input = document.querySelector("input.email")
 let sectionsHeight = [];
 sections.forEach((section, index) => { sectionsHeight[index] = section.offsetHeight })
 
@@ -14,8 +15,7 @@ list.forEach((li, i) => {
     for (let i = 0; i < index; i++) {
       scrollPosition += sectionsHeight[i];
     }
-    if (window.outerWidth < 767) window.scrollTo(0, scrollPosition + 40);
-    else window.scrollTo(0, scrollPosition);
+    window.scrollTo(0, scrollPosition);
     if (window.outerWidth < 767) $(".fas, nav").toggleClass("off");
   })
 
@@ -56,9 +56,10 @@ window.addEventListener("scroll", () => {
 
 })
 
-btn.addEventListener("click", (e) => {
-  e.preventDefault;
-  alert("Thanks for your email! ");
+btn.addEventListener("click", (event) => {
+
+  input.value ? alert("Thanks for your email! ") : alert("Write email before sending!");
+
 })
 
 $(".burger").on("click", function () {
