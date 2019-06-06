@@ -14,12 +14,18 @@
 </head>
 
 <body>
-  <header></header>
-  <nav>
+  <nav class="closed">
+    <p>Smoothie delight </p>
+  </nav>
+  <nav class="off">
+    <div class="burger"><i class="fas fa-bars "></i><i class="fas fa-times off"></i></div>
     <ul>
+
       <li class="active">
-        <p>Smoothie delight</p>
+
+        <p>Smoothie delight </p>
       </li>
+
       <li>HEALTHY & DELICIOUS </li>
       <li>MAKE IT COUNT!</li>
       <li>LOSE WEIGHT</li>
@@ -115,7 +121,8 @@
         <article>Stay updated ! Leave us your email and we will notify you about our promotions, new flavors and new
           products related to our delicious smoothies
         </article>
-        <form action=""><label for="">Leave us your email: <input type="email" placeholder="Your email"></label>
+        <form action=""><label for="">Leave us your email:</label>
+          <input class="email" type="email" placeholder="Your email">
           <input class="send" type="submit" value="Send"></form>
       </div><img src="./img/update.png" alt="">
     </div>
@@ -129,7 +136,7 @@
       <a href="#"><i class="fab fa-youtube"></i></a></span>
   </footer>
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="main.js"></script>
 </body>
 
