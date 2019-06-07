@@ -6,7 +6,7 @@
 }
 body{
   overflow-x: hidden;
-  background-image: url("./img/background2.jpg");
+  background-image: url("./img/background2small.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,8 +83,8 @@ section{
   background-color: rgba(255, 255, 255, 0.85);
   font-size: 16px;
   padding: 8%;
+  text-align: center;
 }
-
 
 section h1, section h2, section h3{
   text-transform: uppercase;
@@ -106,9 +106,6 @@ section img {
   border: 2px solid #831B4C; 
   margin: 0 auto;
 
-}
-section {
-  text-align: center;
 }
 
 section div{
@@ -178,6 +175,9 @@ footer span{
 }
 
 @media(min-width:768px){
+  body{
+    background-image: url("img/background2medium.jpg");
+  }
     .closed,.burger{
       display: none;
     }
@@ -280,6 +280,9 @@ footer span{
 }
 
 @media(min-width: 993px){
+  body{
+    background-image: url("img/background2.jpg");
+  }
    nav ul{
    margin:0 30px;
    }
@@ -291,7 +294,7 @@ footer span{
     font-size: 16px;
   }
   ul li:hover{
-    background-color: yellowgreen;
+    background-color: rgb(154, 205, 50);
   }
   nav ul li p {
     font-size: 26px;
